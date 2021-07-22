@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <div style="float:right;">
+        <ul class="nav navbar-nav">
+            <li *ngIf="IsAuthenticated" class="active"><a><strong>Hi {{UserName}}</strong></a></li>
+            <li *ngIf="!IsAuthenticated"><a routerLink="/login">Login</a></li>
+            <li *ngIf="!IsAuthenticated"><a routerLink="/register">Register</a></li>
+            <li *ngIf="IsAuthenticated"><a routerLink="/dashboard">Dashboard</a></li>
+            <li *ngIf="IsAuthenticated"><a style="cursor:pointer ;" (click)="Logout()">LogOut</a></li>
+          </ul>
+      </div>
+     
+    </div>
+  </nav>
